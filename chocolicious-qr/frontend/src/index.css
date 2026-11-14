@@ -1,0 +1,100 @@
+:root {
+  /* ---- Color tokens ---- */
+  --color-bg: #241512;
+  --color-bg-soft: #2b1916;
+  --color-surface: #33201b;
+  --color-surface-hi: #3d2721;
+  --color-border: #4a332c;
+
+  --color-text: #f7ede2;
+  --color-text-muted: #c9b3a6;
+  --color-text-faint: #93756a;
+
+  --color-gold: #d4a24c;
+  --color-gold-hi: #e6bd6f;
+  --color-gold-deep: #a9782f;
+
+  --color-berry: #b23a48;
+  --color-berry-hi: #cf5462;
+
+  --color-success: #6f9e6a;
+
+  /* ---- Type ---- */
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* ---- Layout ---- */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 6px 20px rgba(10, 4, 2, 0.35);
+  --shadow-pop: 0 10px 30px rgba(10, 4, 2, 0.5);
+
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  overscroll-behavior-y: contain;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold-hi);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Utility: hide scrollbar but keep scroll for the category rail */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Database
+backend/database/*.db
+
+# Secrets
+backend/.env
+
+# Uploaded product images
+backend/app/static/uploads/*
+!backend/app/static/uploads/.gitkeep
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Editors / OS
+.DS_Store
+.vscode/
+*.log
